@@ -5,3 +5,17 @@
   align-items: center;
   flex-direction: column;
 }
+
+.author{
+  display: flex;
+  justify-content: center;
+  color: white;
+  a{
+    margin-right: 3px;
+    margin-left: 3px;
+    color: white;
+    &:hover{
+      color: indianred;
+    }
+  }
+}

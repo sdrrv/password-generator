@@ -6,10 +6,15 @@ import { useState } from "react";
 function App() {
   const [passwordLength, setPasswordLength] = useState(10);
   return (
-    <div className="main-container">
-      <PasswordOutput />
-      <Options length={passwordLength} setLength={setPasswordLength} />
-    </div>
+    <>
+      <div className="main-container">
+        <PasswordOutput />
+        <Options length={passwordLength} setLength={setPasswordLength} />
+      </div>
+      <small className="author">
+        Made by <a href="https://github.com/sdrrv">sdrrv</a> with ❤️
+      </small>
+    </>
   );
 }
 
