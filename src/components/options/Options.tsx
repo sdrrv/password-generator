@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from "react";
+import React from "react";
 import "./Options.component.scss";
 
 type Props = {
@@ -7,11 +7,6 @@ type Props = {
 };
 
 function Options({ length, setLength }: Props) {
-  const handleLengthChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const newValue = Math.floor(parseInt(event.target.value) * 0.5);
-    setLength(newValue < 10 ? 10 : newValue);
-  };
-
   return (
     <div className="options-container">
       <div className="length-container">
@@ -21,8 +16,10 @@ function Options({ length, setLength }: Props) {
         <input
           type="range"
           className="length-container__length-selector"
-          value={length * 2}
-          onChange={handleLengthChange}
+          value={length}
+          onChange={(event) => setLength(parseInt(event.target.value))}
+          min={1}
+          max={50}
         />
       </div>
     </div>
