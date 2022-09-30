@@ -8,7 +8,7 @@ type Props = {
 
 function Options({ length, setLength }: Props) {
   const handleLengthChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const newValue = parseInt(event.target.value);
+    const newValue = Math.floor(parseInt(event.target.value) * 0.5);
     setLength(newValue < 10 ? 10 : newValue);
   };
 
@@ -21,7 +21,7 @@ function Options({ length, setLength }: Props) {
         <input
           type="range"
           className="length-container__length-selector"
-          value={length}
+          value={length * 2}
           onChange={handleLengthChange}
         />
       </div>
