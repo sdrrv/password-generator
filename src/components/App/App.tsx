@@ -4,7 +4,7 @@ import Options from "../options/Options";
 
 function App() {
   return (
-    <div className="resize">
+    <div className="main-container">
       <PasswordOutput />
       <Options />
     </div>
