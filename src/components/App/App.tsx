@@ -16,17 +16,8 @@ function App() {
     SelectedUses.UpperCase,
     SelectedUses.LowerCase,
   ]);
-  const [password, setPassword] = useState(
-    passwordGenerator(passwordLength, generate(config))
-  );
 
-  useEffect(() => {
-    reGeneratePassword();
-  }, [config, passwordLength]);
-
-  const reGeneratePassword = () => {
-    setPassword(passwordGenerator(passwordLength, generate(config)));
-  };
+  const password = passwordGenerator(passwordLength, generate(config));
 
   return (
     <div className="main-container">
