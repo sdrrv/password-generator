@@ -17,11 +17,20 @@ function App() {
     SelectedUses.LowerCase,
   ]);
 
-  const password = passwordGenerator(passwordLength, generate(config));
+  function generateNewPassword(): string {
+    return passwordGenerator(passwordLength, generate(config));
+  }
+
+  const [password, setPassword] = useState(generateNewPassword);
+
+  useEffect(() => setPassword(generateNewPassword()), [config, passwordLength]);
 
   return (
     <div className="main-container">
-      <PasswordOutput password={password} />
+      <PasswordOutput
+        password={password}
+        refreshPassword={() => setPassword(generateNewPassword())}
+      />
       <Options length={passwordLength} setLength={setPasswordLength} />
     </div>
   );
