@@ -5,3 +5,17 @@
   align-items: center;
   flex-direction: column;
 }
+
+.footer{
+  position: relative;
+  bottom: -0.5em;
+  display: block;
+  text-align: center;
+  color: white;
+  a{
+    color: white;
+    &:hover{
+      color: green;
+    }
+  }
+}
