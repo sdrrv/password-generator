@@ -12,7 +12,7 @@ function PasswordOutput({ password }: Props) {
         <button>
           <i className="bi bi-arrow-clockwise" />
         </button>
-        <button>
+        <button onClick={() => navigator.clipboard.writeText(password)}>
           <i className="bi bi-clipboard" />
         </button>
       </div>
