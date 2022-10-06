@@ -26,13 +26,18 @@ function App() {
   useEffect(() => setPassword(generateNewPassword()), [config, passwordLength]);
 
   return (
-    <div className="main-container">
-      <PasswordOutput
-        password={password}
-        refreshPassword={() => setPassword(generateNewPassword())}
-      />
-      <Options length={passwordLength} setLength={setPasswordLength} />
-    </div>
+    <>
+      <div className="main-container">
+        <PasswordOutput
+          password={password}
+          refreshPassword={() => setPassword(generateNewPassword())}
+        />
+        <Options length={passwordLength} setLength={setPasswordLength} />
+      </div>
+      <small className="footer">
+        Made by <a href="https://github.com/sdrrv">sdrrv</a> with ❤️
+      </small>
+    </>
   );
 }
 
