@@ -8,6 +8,6 @@ describe("App.tsx", () => {
   });
 
   it("should render", async () => {
-    await screen.getByText("Hello World");
+    await screen.getByText("Length:");
   });
 });
