@@ -7,6 +7,7 @@ import {
   passwordGenerator,
   SelectedUses,
 } from "../../utils/passwordGenerator";
+import ParticleBackground from "../../assets/ParticleBackground";
 
 function App() {
   const [passwordLength, setPasswordLength] = useState(10);
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <>
+      <ParticleBackground />
       <div className="main-container">
         <PasswordOutput
           password={password}

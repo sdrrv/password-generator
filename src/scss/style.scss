@@ -5,3 +5,7 @@
   background-color: #242424;
 }
 
+.particle-background {
+  z-index: -2;
+  position: fixed;
+}
