@@ -22,6 +22,27 @@ function Options({ length, setLength }: Props) {
           max={50}
         />
       </div>
+      <div className="usage-container">
+        Using:
+        <div className="usage-container__buttons">
+          <div>
+            ABC
+            <input type="checkbox" />
+          </div>
+          <div>
+            abc
+            <input type="checkbox" />
+          </div>
+          <div>
+            123
+            <input type="checkbox" />
+          </div>
+          <div>
+            %$!
+            <input type="checkbox" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
