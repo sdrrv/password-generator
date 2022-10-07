@@ -45,13 +45,17 @@
 
     &__buttons {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       margin-top: 1em;
       div{
+        font-size: 1em;
         display: flex;
         align-items: center;
-        input{
+        font-weight: bolder;
+        input[type=checkbox]{
           margin-left: 0.5em;
+          accent-color: royalblue;
+          border-radius: 20px;
         }
       }
     }
