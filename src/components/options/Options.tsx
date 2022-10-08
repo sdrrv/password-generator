@@ -1,5 +1,6 @@
 import React from "react";
 import "./Options.component.scss";
+import CheckBox from "../CheckBox/CheckBox";
 
 type Props = {
   length: number;
@@ -27,7 +28,7 @@ function Options({ length, setLength }: Props) {
         <div className="usage-container__buttons">
           <div>
             ABC
-            <input type="checkbox" />
+            <CheckBox />
           </div>
           <div>
             abc
