@@ -1,14 +1,17 @@
 {
   "name": "password-generator",
   "private": true,
-  "version": "0.0.0",
+  "homepage": "https://elvas.me",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "prettier --write . && eslint --fix",
-    "test": "vitest run"
+    "test": "vitest run",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap-icons": "^1.9.1",
@@ -29,6 +32,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^4.0.0",
     "jsdom": "^20.0.0",
     "prettier": "^2.7.1",
     "typescript": "^4.6.4",
