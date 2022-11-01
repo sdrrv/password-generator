@@ -5,9 +5,16 @@ import CheckBox from "../CheckBox/CheckBox";
 type Props = {
   length: number;
   setLength: (newLength: number) => void;
+  setConfig: () => void;
 };
 
 function Options({ length, setLength }: Props) {
+  const usageData = {
+    ABC: true,
+    abc: true,
+    numbers: true,
+    symbols: true,
+  };
   return (
     <div className="options-container">
       <div className="length-container">
@@ -32,15 +39,15 @@ function Options({ length, setLength }: Props) {
           </div>
           <div>
             abc
-            <input type="checkbox" />
+            <CheckBox />
           </div>
           <div>
             123
-            <input type="checkbox" />
+            <CheckBox />
           </div>
           <div>
             %$!
-            <input type="checkbox" />
+            <CheckBox />
           </div>
         </div>
       </div>
