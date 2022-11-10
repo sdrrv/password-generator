@@ -11,6 +11,7 @@ import ParticleBackground from "../../assets/ParticleBackground";
 
 function App() {
   const [passwordLength, setPasswordLength] = useState(10);
+  //TODO
   const [config, setConfig] = useState<SelectedUses[]>([
     SelectedUses.Numbers,
     SelectedUses.Symbols,
@@ -24,6 +25,7 @@ function App() {
 
   const [password, setPassword] = useState(generateNewPassword);
 
+  //TODO
   useEffect(() => setPassword(generateNewPassword()), [config, passwordLength]);
 
   return (
