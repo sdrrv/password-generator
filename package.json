@@ -1,6 +1,6 @@
 {
   "name": "password-generator",
-  "private": true,
+  "private": false,
   "homepage": "https://sdrrv.github.io/password-generator/",
   "version": "0.0.1",
   "type": "module",
