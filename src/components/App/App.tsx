@@ -12,7 +12,7 @@ import ParticleBackground from "../../assets/ParticleBackground";
 function App() {
   const [passwordLength, setPasswordLength] = useState(10);
   //TODO
-  const [config, setConfig] = useState<SelectedUses[]>([
+  const [config] = useState<SelectedUses[]>([
     SelectedUses.Numbers,
     SelectedUses.Symbols,
     SelectedUses.UpperCase,
@@ -26,7 +26,10 @@ function App() {
   const [password, setPassword] = useState(generateNewPassword);
 
   //TODO
-  useEffect(() => setPassword(generateNewPassword()), [config, passwordLength]);
+  useEffect(
+    () => setPassword(passwordGenerator(passwordLength, generate(config))),
+    [config, passwordLength]
+  );
 
   return (
     <>
