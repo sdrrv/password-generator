@@ -6,7 +6,7 @@ import * as path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), eslint()],
-
+  base: "/password-generator/",
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   test: {
