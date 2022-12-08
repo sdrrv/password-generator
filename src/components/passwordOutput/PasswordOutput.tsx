@@ -5,6 +5,12 @@ type Props = {
   refreshPassword: () => void;
 };
 
+function getStrength(passwordLength: number): string {
+  if (passwordLength < 10) return "weak";
+  if (passwordLength >= 10 && passwordLength < 20) return "moderate";
+  else return "strong";
+}
+
 function PasswordOutput({ password, refreshPassword }: Props) {
   return (
     <div className="pass-output">
@@ -17,7 +23,7 @@ function PasswordOutput({ password, refreshPassword }: Props) {
           <i className="bi bi-clipboard" />
         </button>
       </div>
-      <div className="pass-strength strong" />
+      <div className={"pass-strength " + getStrength(password.length)} />
     </div>
   );
 }
